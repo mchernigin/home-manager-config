@@ -19,37 +19,78 @@
     rsync
     tmux
     htop
-
+    gnupg # GPG to sign git commits
     ripgrep # Replacement for grep
     fd # Replacement for find
     exa # Replacement for ls
     bat # Like cat but with perks
-    nnn # Terminal file manager
-    fzf
-    zsh-syntax-highlighting
-
     cmake
     delta # More elegant diff viewer
     hugo # Static site generator
     ninja
     html-tidy
-
     neovim
     aspell # Spell check for NeoVim
     pyright # LSP server for Python
-    rnix-ls # LSP server for Nix
+    rnix-lsp # LSP server for Nix
     rust-analyzer # LSP server for Rust
     texlab # LSP server for LaTeX
-
-    direnv # Auto switch nix-shell on cd
-    nix-direnv # Cache for direnv
     pandoc # Document conversion
     newsboat # RSS reader
     tealdeer # tldr implementation
     trash-cli # I hate rm
+    comma # Run commands without installing
   ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    PYTHONSTARTUP = "$HOME/.config/python/startup";
+    LESSHISTFILE = "$HOME/.config/less/lesshst";
+    DIRENV_LOG_FORMAT = ""; # Find derenv option instead
+  };
+
+  home.sessionPath = [
+    "$HOME/.local/scripts/"
+  ];
+
+  # Let Home Manager install and configure zsh
+  programs.zsh = {
+    enable = true;
+    dotDir = ".config/zsh/";
+    defaultKeymap = "viins";
+    enableSyntaxHighlighting = true;
+    shellAliases = {
+      ls = "exa --group-directories-first";
+      l  = "ls";
+      la = "ls -ah";
+      ll = "ls -lah --git";
+      tree = "exa --tree";
+      vim = "nvim";
+      da = "direnv allow";
+      dr = "direnv reload";
+      "," = "comma";
+    };
+    history = {
+      size = 10000;
+      path = ".cache/zsh/history";
+      ignoreSpace = true;
+    };
+    initExtra = (builtins.readFile ./init.zsh);
+  };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.nix-index = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
   };
 }
