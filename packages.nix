@@ -1,7 +1,7 @@
 { pkgs }:
 
 let
-  basics = with pkgs; [
+  general = with pkgs; [
     bash
     curl
     wget
@@ -20,7 +20,7 @@ let
     trash-cli # I hate rm
   ];
 
-  buildTools = with pkgs; [
+  devTools = with pkgs; [
     cmake
     hugo
     ninja
@@ -34,5 +34,5 @@ let
     texlab
   ];
 in
-basics ++ buildTools ++ lspSevers
+general ++ devTools ++ lspSevers
 

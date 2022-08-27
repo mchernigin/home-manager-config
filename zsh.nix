@@ -10,7 +10,7 @@
     vim = "nvim";
     da  = "direnv allow";
     dr  = "direnv reload";
-    hme = "home-manager edit";
+    hme = "$EDITOR $HOME/.config/nixpkgs";
     hms = "home-manager switch && source $HOME/.config/zsh/.zshrc";
     hmp = "home-manager packages";
     hmg = "home-manager generations";
