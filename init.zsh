@@ -1,3 +1,8 @@
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
 # Edit command in vim
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
