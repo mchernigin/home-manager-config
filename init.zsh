@@ -1,3 +1,8 @@
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+  . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+
 # Edit command in vim
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
@@ -23,3 +28,4 @@ CLEAR="%f%b"
 setopt PROMPT_SUBST
 PROMPT='$UCOLOR%n$CLEAR@$GREEN%m$CLEAR %1~$vcs_info_msg_0_ %# '
 
+EDITOR='nvim'
