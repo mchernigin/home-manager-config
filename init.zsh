@@ -28,3 +28,4 @@ CLEAR="%f%b"
 setopt PROMPT_SUBST
 PROMPT='$UCOLOR%n$CLEAR@$GREEN%m$CLEAR %1~$vcs_info_msg_0_ %# '
 
+EDITOR='nvim'
