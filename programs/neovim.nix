@@ -9,6 +9,14 @@ let
       "rev" = "d2147f105c948f2fa651d3af2a45be4a2a63dd3e";
     };
   };
+  vim-plugin-ruscmd = pkgs.vimUtils.buildVimPluginFrom2Nix rec {
+    name = "vim-plugin-ruscmd";
+    src = builtins.fetchGit {
+      "ref" = "master";
+      "url" = "https://github.com/powerman/vim-plugin-ruscmd";
+      "rev" = "e952abbea092e420b128936a0c284fb522612c3a";
+    };
+  };
 
   lua = arg: if builtins.isPath arg then ''
     luafile ${arg}
@@ -25,6 +33,10 @@ in
   plugins = with pkgs.vimPlugins; [
     vim-old-hope
     vim-commentary
+    vim-plugin-ruscmd
+    nvim-web-devicons
+    plenary-nvim
+    telescope-nvim
     vim-nix
 
     { plugin = nerdtree; config = "let NERDTreeShowHidden=1"; }
