@@ -4,7 +4,6 @@
   enable = true;
   userName = "Michael Chernigin";
   userEmail = "michaelchernigin@gmail.com";
-  package = pkgs.gitAndTools.gitFull;
 
   delta = {
     enable = true;
@@ -36,6 +35,7 @@
     };
     commit.gpgsign = "true";
     pull.rebase = "false";
+    push.autoSetupRemote = true;
     init.defaultBranch = "main";
   };
 }

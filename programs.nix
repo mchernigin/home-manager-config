@@ -4,8 +4,9 @@
   # Let Home Manager install and manage itself
   home-manager.enable = true;
 
-  zsh = import ./configs/zsh.nix { inherit pkgs; };
-  git = import ./configs/git.nix { inherit pkgs; };
+  zsh = import ./programs/zsh.nix { inherit pkgs; };
+  git = import ./programs/git.nix { inherit pkgs; };
+  neovim = import ./programs/neovim.nix { inherit pkgs; };
 
   exa = {
     enable = true;

@@ -13,7 +13,6 @@ let
     fd
     bat
     ncdu
-    neovim
     aspell
     pandoc
     newsboat

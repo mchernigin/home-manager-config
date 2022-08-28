@@ -7,7 +7,6 @@
   enableSyntaxHighlighting = true;
   shellAliases = {
     n   = "nnn -e";
-    vim = "nvim";
     da  = "direnv allow";
     dr  = "direnv reload";
     hme = "$EDITOR $HOME/.config/nixpkgs";
@@ -21,5 +20,5 @@
     path = "$HOME/.cache/zsh/history";
     ignoreSpace = true;
   };
-  initExtra = (builtins.readFile ./init.zsh);
+  initExtra = (builtins.readFile ./configs/init.zsh);
 }
