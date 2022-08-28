@@ -1,7 +1,20 @@
+local custom_wombat = require'lualine.themes.wombat'
+
+local almost_black = '#181818'
+local blue_grey = '#696B77'
+custom_wombat.normal.a.fg = almost_black
+custom_wombat.normal.b.fg = almost_black
+custom_wombat.normal.c.bg = almost_black
+custom_wombat.insert.a.fg = almost_black
+custom_wombat.visual.a.fg = almost_black
+custom_wombat.inactive.a.bg = almost_black
+custom_wombat.normal.b.bg = blue_grey
+custom_wombat.normal.c.fg = blue_grey
+
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = 'moonfly',
+    theme = custom_wombat,
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},
