@@ -12,6 +12,7 @@ let
     ripgrep
     fd
     bat
+    ncdu
     neovim
     aspell
     pandoc

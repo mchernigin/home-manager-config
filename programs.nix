@@ -4,8 +4,8 @@
   # Let Home Manager install and manage itself
   home-manager.enable = true;
 
-  zsh = import ./zsh.nix { inherit pkgs; };
-  git = import ./git.nix { inherit pkgs; };
+  zsh = import ./configs/zsh.nix { inherit pkgs; };
+  git = import ./configs/git.nix { inherit pkgs; };
 
   exa = {
     enable = true;

@@ -22,6 +22,7 @@
   aliases = {
     c = "commit";
     d = "diff";
+    ds = "diff --staged";
     s = "status";
     ch = "checkout";
     br = "branch";

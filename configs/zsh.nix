@@ -18,7 +18,7 @@
   };
   history = {
     size = 10000;
-    path = ".cache/zsh/history";
+    path = "$HOME/.cache/zsh/history";
     ignoreSpace = true;
   };
   initExtra = (builtins.readFile ./init.zsh);
