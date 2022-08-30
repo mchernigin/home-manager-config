@@ -12,7 +12,7 @@ let
     ripgrep
     fd
     bat
-    neovim
+    ncdu
     aspell
     pandoc
     newsboat

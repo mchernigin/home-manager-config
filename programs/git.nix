@@ -4,7 +4,6 @@
   enable = true;
   userName = "Michael Chernigin";
   userEmail = "michaelchernigin@gmail.com";
-  package = pkgs.gitAndTools.gitFull;
 
   delta = {
     enable = true;
@@ -22,6 +21,7 @@
   aliases = {
     c = "commit";
     d = "diff";
+    ds = "diff --staged";
     s = "status";
     ch = "checkout";
     br = "branch";
@@ -35,6 +35,7 @@
     };
     commit.gpgsign = "true";
     pull.rebase = "false";
+    push.autoSetupRemote = true;
     init.defaultBranch = "main";
   };
 }
