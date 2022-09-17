@@ -14,6 +14,7 @@
     hmp = "home-manager packages";
     hmg = "home-manager generations";
     "," = "comma";
+    sml = "rlwrap sml";
   };
   history = {
     size = 10000;

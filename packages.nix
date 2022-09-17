@@ -17,6 +17,7 @@ let
     pandoc
     newsboat
     comma
+    rlwrap
     trash-cli # I hate rm
   ];
 

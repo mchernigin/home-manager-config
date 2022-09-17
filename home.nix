@@ -18,6 +18,7 @@ in
 
     sessionPath = [
       "${homeDirectory}/.local/scripts/"
+      "/usr/local/smlnj/bin"
     ];
 
     # Packages are not managed by Home Manager
