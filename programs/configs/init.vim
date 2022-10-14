@@ -1,11 +1,13 @@
 set number
+set cursorline
 set mouse=a
 set ignorecase
 set noswapfile
-set colorcolumn=80
+set colorcolumn=80,100
 
 set termguicolors
-colorscheme old-hope
+let ayucolor="mirage"
+colorscheme ayu
 
 set tabstop=4
 set softtabstop=4
@@ -62,4 +64,15 @@ nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+
+set listchars=tab:├─┤,trail:␠,nbsp:⎵,lead:·
+set list
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+command! TrimWhitespace call TrimWhitespace()
+nmap <Leader>t :retab <bar> TrimWhitespace<CR>
 

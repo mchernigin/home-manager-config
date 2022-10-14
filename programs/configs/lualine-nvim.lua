@@ -14,7 +14,7 @@ custom_wombat.normal.c.fg = blue_grey
 require('lualine').setup {
   options = {
     icons_enabled = false,
-    theme = custom_wombat,
+    theme = gruvbox_dark,
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {},

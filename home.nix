@@ -18,7 +18,10 @@ in
 
     sessionPath = [
       "${homeDirectory}/.local/scripts/"
-      "/usr/local/smlnj/bin"
+      "/usr/local/smlnj/bin/"
+      "${homeDirectory}/.cargo/bin/"
+      "/opt/local/bin"
+      "/opt/local/sbin"
     ];
 
     # Packages are not managed by Home Manager

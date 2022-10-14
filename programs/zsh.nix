@@ -13,7 +13,6 @@
     hms = "home-manager switch && source $HOME/.config/zsh/.zshrc";
     hmp = "home-manager packages";
     hmg = "home-manager generations";
-    "," = "comma";
     sml = "rlwrap sml";
   };
   history = {

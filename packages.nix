@@ -1,31 +1,31 @@
+
 { pkgs }:
 
 let
   general = with pkgs; [
-    bash
-    curl
     wget
+    curl
     rsync
-    tmux
-    htop
-    gnupg
+    aspell
+    bash
+    rlwrap
     ripgrep
     fd
-    bat
-    ncdu
-    aspell
-    pandoc
+    htop
+    neofetch
+    gnupg
     newsboat
-    comma
-    rlwrap
-    trash-cli # I hate rm
+    tmux
+    ncdu
+    texlive.combined.scheme-full
   ];
 
   devTools = with pkgs; [
+    bison
+    flex
+    ninja
     cmake
     hugo
-    ninja
-    html-tidy
   ];
 
   lspSevers = with pkgs; [

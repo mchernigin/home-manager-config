@@ -19,14 +19,14 @@ compinit
 _comp_options+=(globdots)
 
 # Prompt with git info
-autoload -Uz vcs_info
-precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats ' (%b)'
-[ "$USER" = "root" ] && UCOLOR="%B%F{red}" || UCOLOR="%B%F{yellow}"
-GREEN="%B%F{green}"
-CLEAR="%f%b"
-setopt PROMPT_SUBST
-PROMPT='$UCOLOR%n$CLEAR@$GREEN%m$CLEAR %1~$vcs_info_msg_0_ %# '
+# autoload -Uz vcs_info
+# precmd() { vcs_info }
+# zstyle ':vcs_info:git:*' formats ' (%b)'
+# [ "$USER" = "root" ] && UCOLOR="%B%F{red}" || UCOLOR="%B%F{yellow}"
+# GREEN="%B%F{green}"
+# CLEAR="%f%b"
+# setopt PROMPT_SUBST
+# PROMPT='$UCOLOR%n$CLEAR@$GREEN%m$CLEAR %1~$vcs_info_msg_0_ %# '
 
 EDITOR='nvim'
 

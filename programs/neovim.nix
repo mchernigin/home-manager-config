@@ -29,7 +29,7 @@ in
 {
   enable = true;
   vimAlias = true;
-  
+
   plugins = with pkgs.vimPlugins; [
     vim-old-hope
     vim-commentary
@@ -38,10 +38,11 @@ in
     plenary-nvim
     telescope-nvim
     vim-nix
-
-    { plugin = nerdtree; config = "let NERDTreeShowHidden=1"; }
+    gruvbox
+    ayu-vim
     { plugin = vim-sneak; config = "let g:sneak#label = 1"; }
     { plugin = lualine-nvim; config = lua ./configs/lualine-nvim.lua; }
+    { plugin = nvim-lspconfig; config = lua ./configs/lsp-nvim.lua; }
   ];
 
   extraConfig = builtins.readFile ./configs/init.vim;

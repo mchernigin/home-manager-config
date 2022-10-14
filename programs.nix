@@ -19,21 +19,38 @@
     enableZshIntegration = true;
   };
 
-  nix-index = {
+  fzf = {
     enable = true;
     enableZshIntegration = true;
   };
 
-  fzf = {
+  bat = {
     enable = true;
-    enableZshIntegration = true;
+    config.theme = "1337";
   };
 
   tealdeer = {
     enable = true;
     settings = {
       display.compact = true;
-      updates.auto_update = true;
+      updates.auto_update = false;
     };
   };
+
+  starship = {
+    enable = true;
+    settings = {
+      add_newline = true;
+      package.disabled = true;
+    };
+  };
+
+  autojump = {
+    enable = true;
+  };
+
+  nnn = {
+    enable = true;
+  };
 }
+
